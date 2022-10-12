@@ -6,7 +6,11 @@ enable_testing()
 
 set(CMAKE_BUILD_TYPE debug)
 
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+
 include_directories(./include)
+include_directories(./src)
 
 set(libraries )
 set(src )
@@ -24,6 +28,15 @@ set(main
 
 aux_source_directory(./src SRC_LIST)
 aux_source_directory(./src/sort/ SRC_LIST)
+
+# Containers
+aux_source_directory(./src/Containers/Vector SRC_LIST)
+
+# multi_thread
+aux_source_directory(./src/multi_thread SRC_LIST)
+
+# Overload
+aux_source_directory(./src/Overload SRC_LIST)
 
 set(libraries ${OpenCV_LIBS})
 set(src ${main} ${SRC_LIST})
