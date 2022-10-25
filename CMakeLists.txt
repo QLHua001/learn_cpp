@@ -38,6 +38,9 @@ aux_source_directory(./src/multi_thread SRC_LIST)
 # Overload
 aux_source_directory(./src/Overload SRC_LIST)
 
+# Smart_Pointer
+aux_source_directory(./src/Smart_Pointer SRC_LIST)
+
 set(libraries ${OpenCV_LIBS})
 set(src ${main} ${SRC_LIST})
 

@@ -6,6 +6,7 @@
 #include "multi_thread/multi_thread.h"
 #include "Containers/Vector/Vector_Test.h"
 #include "Overload/Overload.h"
+#include "Smart_Pointer/Smart_Pointer.h"
 
 static float intersection_area(const Object& obj1, const Object& obj2){
     cv::Rect_<float> inter_area = obj1.rect & obj2.rect;
@@ -156,7 +157,12 @@ int main(int, char**) {
 
     //! Overload
     // Overload::test_overload_assignment_operator();
-    Overload::test_overload_bracket_operator();
+    // Overload::test_overload_bracket_operator();
+
+    //! Smart_Pointer
+    // Smart_Pointer::shared_ptr_test();
+    // Smart_Pointer::unique_ptr_test();
+    Smart_Pointer::weak_ptr_test();
 
 
 }
