@@ -58,6 +58,8 @@ private:
 
             double _d1;
             double& _d2;
+
+            double _d3{0.549};
     };
 
 

@@ -4,7 +4,7 @@
 //! C++类的初始化列表 总结
 /*
 
-1.  初始化类的成员有两种方式，一是使用初始化列表，二是在构造函数体内进行赋值操作。
+1.  初始化类的成员有两种方式，一是使用初始化列表，二是在构造函数体内进行赋值操作。//! (还有一种，就是声明时初始化)， 初始化的优先次序为：声明时初始化 > 初始化列表 > 构造函数体内进行赋值操作
     使用初始化列表主要是基于性能问题，对于内置类型，如int, float等，使用初始化类表和在构造函数体内初始化差别不是很大，
     但是对于类类型成员变量来说，最好使用初始化列表，为什么呢？由测试可知，使用初始化列表少了一次调用默认构造函数的过程，
     这对于数据密集型的类来说，是非常高效的。
@@ -29,9 +29,10 @@ List_Initialization::Foo::Foo(int x, int y) : _x(x), _y(y), _c1(4), _c2(_c1), _d
     // this->_y = y;
 }
 
-List_Initialization::Foo::Foo(int x, int y, const Bar& bar1) : _x(x), _y(y), _c1(4), _c2(_c1), _d1(0.1), _d2(_d1){
+List_Initialization::Foo::Foo(int x, int y, const Bar& bar1) : _x(x), _y(y), _c1(4), _c2(_c1), _d1(0.1), _d2(_d1), _d3(2.854){
     printf("--> call Foo Construct Func. [Foo(int x, int y, const Bar& bar1)]\n");
     this->_bar1 = bar1;
+    this->_d3 = 3.1564;
 }
 
 List_Initialization::Foo::Foo(const Foo& other):_c1(4), _c2(_c1), _d1(0.1), _d2(_d1){
