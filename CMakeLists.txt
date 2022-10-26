@@ -5,6 +5,7 @@ include(CTest)
 enable_testing()
 
 set(CMAKE_BUILD_TYPE debug)
+# set(CMAKE_VERBOSE_MAKEFILE ON)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
@@ -46,6 +47,9 @@ aux_source_directory(./src/Lambda SRC_LIST)
 
 # List_Initialization
 aux_source_directory(./src/List_Initialization SRC_LIST)
+
+# ConstExpr
+aux_source_directory(./src/ConstExpr SRC_LIST)
 
 set(libraries ${OpenCV_LIBS})
 set(src ${main} ${SRC_LIST})

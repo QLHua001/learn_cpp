@@ -4,6 +4,7 @@
 #include "learn_cpp.h"
 #include "sort.h"
 #include "List_Initialization/List_Initialization.h"
+#include "ConstExpr/ConstExpr.h"
 #include "multi_thread/multi_thread.h"
 #include "Containers/Vector/Vector_Test.h"
 #include "Overload/Overload.h"
@@ -151,7 +152,10 @@ int main(int, char**) {
     // std::cout << std::endl;
 
     //! List_Initialization
-    List_Initialization::list_initialization_test();
+    // List_Initialization::list_initialization_test();
+
+    //! ConstExpr
+    ConstExpr::constexpr_test();
 
     //! multi_thread
     // multi_thread::thread_test();
