@@ -44,6 +44,9 @@ aux_source_directory(./src/Smart_Pointer SRC_LIST)
 # Lambda
 aux_source_directory(./src/Lambda SRC_LIST)
 
+# List_Initialization
+aux_source_directory(./src/List_Initialization SRC_LIST)
+
 set(libraries ${OpenCV_LIBS})
 set(src ${main} ${SRC_LIST})
 

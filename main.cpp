@@ -3,6 +3,7 @@
 
 #include "learn_cpp.h"
 #include "sort.h"
+#include "List_Initialization/List_Initialization.h"
 #include "multi_thread/multi_thread.h"
 #include "Containers/Vector/Vector_Test.h"
 #include "Overload/Overload.h"
@@ -149,6 +150,9 @@ int main(int, char**) {
     // }
     // std::cout << std::endl;
 
+    //! List_Initialization
+    List_Initialization::list_initialization_test();
+
     //! multi_thread
     // multi_thread::thread_test();
 
@@ -166,5 +170,7 @@ int main(int, char**) {
     // Smart_Pointer::weak_ptr_test();
 
     //! Lambda
-    Lambda::lambda_test();
+    // Lambda::lambda_test();
+
+    
 }
