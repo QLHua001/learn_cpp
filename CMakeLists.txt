@@ -51,6 +51,9 @@ aux_source_directory(./src/List_Initialization SRC_LIST)
 # ConstExpr
 aux_source_directory(./src/ConstExpr SRC_LIST)
 
+# New_Delete
+aux_source_directory(./src/New_Delete SRC_LIST)
+
 set(libraries ${OpenCV_LIBS})
 set(src ${main} ${SRC_LIST})
 

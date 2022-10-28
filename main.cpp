@@ -5,6 +5,7 @@
 #include "sort.h"
 #include "List_Initialization/List_Initialization.h"
 #include "ConstExpr/ConstExpr.h"
+#include "New_Delete/New_Delete.h"
 #include "multi_thread/multi_thread.h"
 #include "Containers/Vector/Vector_Test.h"
 #include "Overload/Overload.h"
@@ -155,7 +156,10 @@ int main(int, char**) {
     // List_Initialization::list_initialization_test();
 
     //! ConstExpr
-    ConstExpr::constexpr_test();
+    // ConstExpr::constexpr_test();
+
+    //! New_Delete
+    // New_Delete::New_Delete_Test();
 
     //! multi_thread
     // multi_thread::thread_test();
@@ -170,7 +174,7 @@ int main(int, char**) {
 
     //! Smart_Pointer
     // Smart_Pointer::shared_ptr_test();
-    // Smart_Pointer::unique_ptr_test();
+    Smart_Pointer::unique_ptr_test();
     // Smart_Pointer::weak_ptr_test();
 
     //! Lambda
