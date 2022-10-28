@@ -4,7 +4,7 @@
 
 // DemoCls
 Smart_Pointer::DemoCls::DemoCls(int id1, int id2, const char* name){
-    printf("调用构造函数\n");
+    printf("调用有参构造函数\n");
 
     _id1 = id1;
     _id2 = id2;

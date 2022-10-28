@@ -75,6 +75,8 @@ void Smart_Pointer::unique_ptr_test(){
     std::cout << std::endl << std::endl;
     std::cout << "################## TEST5 Start #######################" << std::endl;
 
+    //! std::unique_ptr<DemoCls> p6(new DemoCls[3], [](DemoCls* p){delete[] p;}); //! Error 编译错误
+
     std::cout << "################## TEST5 End #######################" << std::endl;
 
 }

@@ -68,7 +68,15 @@ void Smart_Pointer::shared_ptr_test(){
     std::cout << "################## TEST3 自定义释放规则 Start #######################" << std::endl;
 
     std::cout << " //! 在某些场景中, 自定义释放规则是很有必要的。比如, 对于申请的动态数组来说, shared_ptr 指针默认的释放规则是不支持释放数组的, 只能自定义对应的释放规则, 才能正确地释放申请的堆内存." << std::endl;
-    std::shared_ptr<int> p6(new int[10], [](int* p){delete[] p;});
+    // std::shared_ptr<int> p6(new int[10], [](int* p){delete[] p;});
+
+    // std::shared_ptr<DemoCls> p7(new DemoCls[11]); //! 编译错误
+    std::shared_ptr<DemoCls> p7(new DemoCls[11], [](DemoCls* p){delete[] p;});
+
+    // DemoCls ptr2[7]{{1,2,"a"}, {3,4,"b"}};
+
+    // DemoCls* ptr3 = new DemoCls[3];
+    // delete[] ptr3;
     
     std::cout << "################## TEST3 自定义释放规则 End #######################" << std::endl;
 

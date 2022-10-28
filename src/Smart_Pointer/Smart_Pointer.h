@@ -1,6 +1,6 @@
 #pragma once
 
-
+#include <iostream>
 #include "Smart_Pointer.h"
 
 class Smart_Pointer{
@@ -9,6 +9,8 @@ private:
 
     class DemoCls{
         public: 
+            DemoCls():_id1(0), _id2(0), _name(nullptr){printf("调用默认无参构造函数.\n");}
+
             // 构造函数
             DemoCls(int id1, int id2, const char* name);
 
