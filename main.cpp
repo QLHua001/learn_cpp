@@ -6,6 +6,7 @@
 #include "List_Initialization/List_Initialization.h"
 #include "ConstExpr/ConstExpr.h"
 #include "New_Delete/New_Delete.h"
+#include "Inline/Inline.h"
 #include "multi_thread/multi_thread.h"
 #include "Containers/Vector/Vector_Test.h"
 #include "Overload/Overload.h"
@@ -161,6 +162,9 @@ int main(int, char**) {
     //! New_Delete
     // New_Delete::New_Delete_Test();
 
+    //! inline
+    Inline::Inline_Test();
+
     //! multi_thread
     // multi_thread::thread_test();
 
@@ -174,11 +178,10 @@ int main(int, char**) {
 
     //! Smart_Pointer
     // Smart_Pointer::shared_ptr_test();
-    Smart_Pointer::unique_ptr_test();
+    // Smart_Pointer::unique_ptr_test();
     // Smart_Pointer::weak_ptr_test();
 
     //! Lambda
     // Lambda::lambda_test();
 
-    
 }
