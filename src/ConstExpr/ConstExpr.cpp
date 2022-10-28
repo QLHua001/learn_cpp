@@ -21,7 +21,8 @@ static void test2(){
     constexpr int a = 10;
     constexpr int b = 12;
     int c = 15;
-    int val = mul(a, c);
+    int val1 = mul(a, b);
+    int val2 = mul(a, c);
 
 }
 
