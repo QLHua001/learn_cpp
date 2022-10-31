@@ -5,6 +5,7 @@
 #include "sort.h"
 #include "List_Initialization/List_Initialization.h"
 #include "ConstExpr/ConstExpr.h"
+#include "Const/Const.h"
 #include "New_Delete/New_Delete.h"
 #include "Inline/Inline.h"
 #include "multi_thread/multi_thread.h"
@@ -111,6 +112,9 @@ static void nms_0907(std::vector<Object>& sorted_boxes, std::vector<int>& picked
     
 }
 
+//! http://c.biancheng.net/view/vip_2110.html
+// int square(int n); //! 等价于 extern int square(int n); 变量和函数不同，编译器只能根据 extern 来区分，有 extern 才是声明，没有 extern 就是定义。
+
 int main(int, char**) {
     std::cout << "Hello, world!\n";
 
@@ -159,11 +163,14 @@ int main(int, char**) {
     //! ConstExpr
     // ConstExpr::constexpr_test();
 
+    //! Const
+    Const::Const_Test();
+
     //! New_Delete
     // New_Delete::New_Delete_Test();
 
     //! inline
-    Inline::Inline_Test();
+    // Inline::Inline_Test();
 
     //! multi_thread
     // multi_thread::thread_test();
@@ -183,5 +190,8 @@ int main(int, char**) {
 
     //! Lambda
     // Lambda::lambda_test();
+
+    // int val = square(3);
+    // std::cout << "val: " << val << std::endl;
 
 }

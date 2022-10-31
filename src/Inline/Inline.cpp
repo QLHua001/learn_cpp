@@ -28,7 +28,7 @@
 #define SQ(n) ((n)*(n))
 
 //! 推荐使用内联函数来替换带参数的宏。
-inline int square(int n){
+static inline int square(int n){
     return n*n;
 }
 
