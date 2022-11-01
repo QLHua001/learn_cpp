@@ -54,6 +54,9 @@ aux_source_directory(./src/ConstExpr SRC_LIST)
 # Const
 aux_source_directory(./src/Const SRC_LIST)
 
+# Reference
+aux_source_directory(./src/Reference SRC_LIST)
+
 # New_Delete
 aux_source_directory(./src/New_Delete SRC_LIST)
 
