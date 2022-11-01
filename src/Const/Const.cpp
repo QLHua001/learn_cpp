@@ -70,3 +70,31 @@ void Const::Const_Test(){
     //! 则依然可以通过这些指针/引用修改其指向/绑定的对象。
 
 }
+#include <array>
+//! const 与 constexprt
+//! 总的来说在 C++ 11 标准中，const 用于为修饰的变量添加“只读”属性；
+//! 而 constexpr 关键字则用于指明其后是一个常量（或者常量表达式），编译器在编译程序时可以顺带将其结果计算出来，而无需等到程序运行阶段，
+//! 这样的优化极大地提高了程序的执行效率。
+
+//! C++ 11标准中，为了解决 const 关键字的双重语义问题，保留了 const 表示“只读”的语义，而将“常量”的语义划分给了新添加的 constexpr 关键字。
+//! 因此 C++11 标准中，建议将 const 和 constexpr 的功能区分开，即凡是表达“只读”语义的场景都使用 const，表达“常量”语义的场景都使用 constexpr。
+//! const 与 constexprt
+
+// static void dis_1(const int x){
+//     //错误，x是只读的变量
+//     std::array <int,x> myarr{1,2,3,4,5};
+//     std::cout << myarr[1] << std::endl;
+// }
+
+static void dis_2(){
+    constexpr int x = 5;
+    std::array <int,x> myarr{1,2,3,4,5};
+    std::cout << myarr[1] << std::endl;
+}
+
+void Const::Const_Test_2(){
+
+    // dis_1();
+    dis_2();
+
+}

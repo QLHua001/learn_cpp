@@ -164,7 +164,8 @@ int main(int, char**) {
     // ConstExpr::constexpr_test();
 
     //! Const
-    Const::Const_Test();
+    // Const::Const_Test();
+    Const::Const_Test_2();
 
     //! New_Delete
     // New_Delete::New_Delete_Test();
