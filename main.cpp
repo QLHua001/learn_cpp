@@ -14,6 +14,7 @@
 #include "Overload/Overload.h"
 #include "Smart_Pointer/Smart_Pointer.h"
 #include "Lambda/Lambda.h"
+#include "Regex/Regex.h"
 
 static float intersection_area(const Object& obj1, const Object& obj2){
     cv::Rect_<float> inter_area = obj1.rect & obj2.rect;
@@ -169,7 +170,7 @@ int main(int, char**) {
     // Const::Const_Test_2();
 
     //! Reference
-    Reference::Reference_Test();
+    // Reference::Reference_Test();
 
     //! New_Delete
     // New_Delete::New_Delete_Test();
@@ -183,6 +184,7 @@ int main(int, char**) {
     //! Containers
     // Vector
     // Vector_Test::push_back_emplace_back();
+    // Vector_Test::move_constructor();
 
     //! Overload
     // Overload::test_overload_assignment_operator();
@@ -195,6 +197,9 @@ int main(int, char**) {
 
     //! Lambda
     // Lambda::lambda_test();
+
+    //! Regex
+    // Regex::Regex_Test();
 
     // int val = square(3);
     // std::cout << "val: " << val << std::endl;
