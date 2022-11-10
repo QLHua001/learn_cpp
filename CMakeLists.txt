@@ -30,6 +30,9 @@ set(main
 aux_source_directory(./src SRC_LIST)
 aux_source_directory(./src/sort/ SRC_LIST)
 
+# Class_Object
+aux_source_directory(./src/Class_Object/ SRC_LIST)
+
 # Containers
 aux_source_directory(./src/Containers/Vector SRC_LIST)
 

@@ -3,6 +3,7 @@
 
 #include "learn_cpp.h"
 #include "sort.h"
+#include "Class_Object/Class_Object.h"
 #include "List_Initialization/List_Initialization.h"
 #include "ConstExpr/ConstExpr.h"
 #include "Const/Const.h"
@@ -158,6 +159,9 @@ int main(int, char**) {
     //     std::cout << a[i] << "\t";
     // }
     // std::cout << std::endl;
+
+    //! Class_Object
+    Class_Object::Test_Polymorphism();
 
     //! List_Initialization
     // List_Initialization::list_initialization_test();
