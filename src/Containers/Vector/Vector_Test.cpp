@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 #include "Vector_Test.h"
 #include <cstring>
 
@@ -89,4 +90,24 @@ void Vector_Test::push_back_emplace_back(){
 
     printf("end ***********************\n");
 
+}
+
+void Vector_Test::move_constructor(){
+    printf("=== move_constructor ===\n");
+
+    for (size_t i = 0; i < 100; i++)
+    {
+        // auto btime1 = std::chrono::steady_clock::now();
+        // std::vector<int> v1(1000000, 5);
+        // std::vector<int> v2 = std::move(v1);
+        // // std::vector<int> v2 = v1; 
+        // auto etime1 = std::chrono::steady_clock::now();
+        // std::cout << "1. cost time: " << std::chrono::duration_cast<std::chrono::milliseconds>(etime1-btime1).count() << " ms" << std::endl;
+
+        auto btime2 = std::chrono::steady_clock::now();
+        std::vector<int> v3 = std::vector<int>(1000000, 5); 
+        auto etime2 = std::chrono::steady_clock::now();
+        std::cout << "2. cost time: " << std::chrono::duration_cast<std::chrono::milliseconds>(etime2-btime2).count() << " ms" << std::endl;
+    }
+    
 }

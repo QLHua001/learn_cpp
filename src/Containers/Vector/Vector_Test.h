@@ -27,6 +27,8 @@ public:
 
     static void push_back_emplace_back();
 
+    static void move_constructor();
+
 private:
 
 };
