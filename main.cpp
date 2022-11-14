@@ -3,6 +3,9 @@
 
 #include "learn_cpp.h"
 #include "sort.h"
+#include "C_Cpp_Mixup/func1.h"
+#include "C_Cpp_Mixup/func2.h"
+#include "C_Cpp_Mixup/Test_C.h"
 #include "Class_Object/Class_Object.h"
 #include "List_Initialization/List_Initialization.h"
 #include "ConstExpr/ConstExpr.h"
@@ -116,7 +119,11 @@ static void nms_0907(std::vector<Object>& sorted_boxes, std::vector<int>& picked
 }
 
 //! http://c.biancheng.net/view/vip_2110.html
+//! extern
 // int square(int n); //! 等价于 extern int square(int n); 变量和函数不同，编译器只能根据 extern 来区分，有 extern 才是声明，没有 extern 就是定义。
+// extern "C" {
+//     void func1(); //! 等价于 extern void func1();
+// }
 
 int main(int, char**) {
     std::cout << "Hello, world!\n";
@@ -160,8 +167,13 @@ int main(int, char**) {
     // }
     // std::cout << std::endl;
 
+    //! C_Cpp_Mixup
+    // func1();
+    func2();
+    // Test_C();
+
     //! Class_Object
-    Class_Object::Test_Polymorphism();
+    // Class_Object::Test_Polymorphism();
 
     //! List_Initialization
     // List_Initialization::list_initialization_test();
