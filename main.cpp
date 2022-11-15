@@ -15,10 +15,12 @@
 #include "Inline/Inline.h"
 #include "multi_thread/multi_thread.h"
 #include "Containers/Vector/Vector_Test.h"
+#include "Containers/String/String_Test.h"
 #include "Overload/Overload.h"
 #include "Smart_Pointer/Smart_Pointer.h"
 #include "Lambda/Lambda.h"
 #include "Regex/Regex.h"
+#include "TypeID/TypeID.h"
 
 static float intersection_area(const Object& obj1, const Object& obj2){
     cv::Rect_<float> inter_area = obj1.rect & obj2.rect;
@@ -169,7 +171,7 @@ int main(int, char**) {
 
     //! C_Cpp_Mixup
     // func1();
-    func2();
+    // func2();
     // Test_C();
 
     //! Class_Object
@@ -202,6 +204,9 @@ int main(int, char**) {
     // Vector_Test::push_back_emplace_back();
     // Vector_Test::move_constructor();
 
+    // String
+    // String_Test::test();
+
     //! Overload
     // Overload::test_overload_assignment_operator();
     // Overload::test_overload_bracket_operator();
@@ -219,5 +224,9 @@ int main(int, char**) {
 
     // int val = square(3);
     // std::cout << "val: " << val << std::endl;
+
+    //! typeid
+    // TypeID::test_typeid();
+    TypeID::test_typeid_class();
 
 }

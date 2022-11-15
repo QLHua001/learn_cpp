@@ -38,6 +38,7 @@ aux_source_directory(./src/Class_Object/ SRC_LIST)
 
 # Containers
 aux_source_directory(./src/Containers/Vector SRC_LIST)
+aux_source_directory(./src/Containers/String SRC_LIST)
 
 # multi_thread
 aux_source_directory(./src/multi_thread SRC_LIST)
@@ -71,6 +72,9 @@ aux_source_directory(./src/Inline SRC_LIST)
 
 # Regex
 aux_source_directory(./src/Regex SRC_LIST)
+
+# TypeID
+aux_source_directory(./src/TypeID SRC_LIST)
 
 set(libraries ${OpenCV_LIBS})
 set(src ${main} ${SRC_LIST})
