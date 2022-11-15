@@ -14,6 +14,7 @@
 #include "New_Delete/New_Delete.h"
 #include "Inline/Inline.h"
 #include "multi_thread/multi_thread.h"
+#include "Containers/Array/Array_Test.h"
 #include "Containers/Vector/Vector_Test.h"
 #include "Containers/String/String_Test.h"
 #include "Overload/Overload.h"
@@ -200,9 +201,13 @@ int main(int, char**) {
     // multi_thread::thread_test();
 
     //! Containers
+    // Array
+    Array_Test::test();
+
     // Vector
     // Vector_Test::push_back_emplace_back();
     // Vector_Test::move_constructor();
+    // Vector_Test::test();
 
     // String
     // String_Test::test();
@@ -227,6 +232,6 @@ int main(int, char**) {
 
     //! typeid
     // TypeID::test_typeid();
-    TypeID::test_typeid_class();
+    // TypeID::test_typeid_class();
 
 }

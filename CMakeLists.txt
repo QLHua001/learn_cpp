@@ -37,6 +37,7 @@ aux_source_directory(./src/C_Cpp_Mixup SRC_LIST)
 aux_source_directory(./src/Class_Object/ SRC_LIST)
 
 # Containers
+aux_source_directory(./src/Containers/Array SRC_LIST)
 aux_source_directory(./src/Containers/Vector SRC_LIST)
 aux_source_directory(./src/Containers/String SRC_LIST)
 

@@ -111,3 +111,8 @@ void Vector_Test::move_constructor(){
     }
     
 }
+
+void Vector_Test::test(){
+    int n = 102;
+    int a[n];
+}

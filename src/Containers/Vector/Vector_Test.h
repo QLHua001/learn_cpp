@@ -24,6 +24,7 @@ class Vector_Test{
     };
 
 public:
+    static void test();
 
     static void push_back_emplace_back();
 
