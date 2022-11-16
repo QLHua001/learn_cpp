@@ -40,6 +40,7 @@ aux_source_directory(./src/Class_Object/ SRC_LIST)
 aux_source_directory(./src/Containers/Array SRC_LIST)
 aux_source_directory(./src/Containers/Vector SRC_LIST)
 aux_source_directory(./src/Containers/Deque SRC_LIST)
+aux_source_directory(./src/Containers/List SRC_LIST)
 aux_source_directory(./src/Containers/String SRC_LIST)
 
 # multi_thread
