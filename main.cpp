@@ -16,6 +16,7 @@
 #include "multi_thread/multi_thread.h"
 #include "Containers/Array/Array_Test.h"
 #include "Containers/Vector/Vector_Test.h"
+#include "Containers/Deque/Deque_Test.h"
 #include "Containers/String/String_Test.h"
 #include "Overload/Overload.h"
 #include "Smart_Pointer/Smart_Pointer.h"
@@ -202,12 +203,16 @@ int main(int, char**) {
 
     //! Containers
     // Array
-    Array_Test::test();
+    // Array_Test::test();
 
     // Vector
     // Vector_Test::push_back_emplace_back();
     // Vector_Test::move_constructor();
     // Vector_Test::test();
+
+    // Deque
+    // Deque_Test::test();
+    Deque_Test::emplace_test();
 
     // String
     // String_Test::test();
