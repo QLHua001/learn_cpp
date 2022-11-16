@@ -18,6 +18,7 @@
 #include "Containers/Vector/Vector_Test.h"
 #include "Containers/Deque/Deque_Test.h"
 #include "Containers/List/List_Test.h"
+#include "Containers/Forward_List/Forward_List_Test.h"
 #include "Containers/String/String_Test.h"
 #include "Overload/Overload.h"
 #include "Smart_Pointer/Smart_Pointer.h"
@@ -216,7 +217,10 @@ int main(int, char**) {
     // Deque_Test::emplace_test();
 
     // List
-    List_Test::test();
+    // List_Test::test();
+
+    // Forward_List
+    Forward_List_Test::test();
 
     // String
     // String_Test::test();
