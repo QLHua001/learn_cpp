@@ -20,6 +20,7 @@
 #include "Containers/List/List_Test.h"
 #include "Containers/Forward_List/Forward_List_Test.h"
 #include "Containers/Map/Map_Test.h"
+#include "Containers/Set/Set_Test.h"
 #include "Containers/String/String_Test.h"
 #include "Overload/Overload.h"
 #include "Smart_Pointer/Smart_Pointer.h"
@@ -225,7 +226,10 @@ int main(int, char**) {
 
     // Map
     // Map_Test::pair_test();
-    Map_Test::test();
+    // Map_Test::test();
+
+    // Set
+    Set_Test::test();
 
     // String
     // String_Test::test();
