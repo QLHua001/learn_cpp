@@ -3,6 +3,8 @@
 
 #include "learn_cpp.h"
 #include "sort.h"
+#include "data_structures/list_array/list_array.h"
+#include "Algorithms/Search/Search.h"
 #include "C_Cpp_Mixup/func1.h"
 #include "C_Cpp_Mixup/func2.h"
 #include "C_Cpp_Mixup/Test_C.h"
@@ -175,6 +177,14 @@ int main(int, char**) {
     // }
     // std::cout << std::endl;
 
+    // data_structures
+    // list_array
+    // data_structures::list_array::test_list_array();
+
+    // Algorithms
+    // Search
+    Algorithms::Search::Test_BinSearch();
+
     //! C_Cpp_Mixup
     // func1();
     // func2();
@@ -229,7 +239,7 @@ int main(int, char**) {
     // Map_Test::test();
 
     // Set
-    Set_Test::test();
+    // Set_Test::test();
 
     // String
     // String_Test::test();
