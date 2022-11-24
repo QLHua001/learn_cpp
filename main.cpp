@@ -4,7 +4,8 @@
 #include "learn_cpp.h"
 #include "sort.h"
 #include "data_structures/list_array/list_array.h"
-#include "Algorithms/Search/Search.h"
+#include "algorithms/Search/Search.h"
+#include "algorithms/Sort/Sort.h"
 #include "C_Cpp_Mixup/func1.h"
 #include "C_Cpp_Mixup/func2.h"
 #include "C_Cpp_Mixup/Test_C.h"
@@ -179,11 +180,17 @@ int main(int, char**) {
 
     // data_structures
     // list_array
-    // data_structures::list_array::test_list_array();
+    data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
 
     // Algorithms
     // Search
-    Algorithms::Search::Test_BinSearch();
+    std::vector<int> v1{2, 3, 5, 11, 34, 51, 102, 222};
+    int idx = algorithms::Search::Test_BinSearch(v1, 11);// 命名空间:类空间:成员函数
+
+    // Sort
+    std::vector<int> v2{233, 32, 535, 101, 15, 51, 102, 222};
+    algorithms::Sort::Test_BubbleSort(v2); // 命名空间:类空间:成员函数
+    for(auto& val : v2) std::cout << val << "\t";
 
     //! C_Cpp_Mixup
     // func1();

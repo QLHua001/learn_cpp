@@ -34,9 +34,12 @@ aux_source_directory(./src/sort/ SRC_LIST)
 # list_array
 aux_source_directory(./data_structures/list_array SRC_LIST)
 
-# Algorithms
+# algorithms
 # Search
-aux_source_directory(./Algorithms/Search SRC_LIST)
+aux_source_directory(./algorithms/Search SRC_LIST)
+
+# Sort
+aux_source_directory(./algorithms/Sort SRC_LIST)
 
 # C_Cpp_Misup
 aux_source_directory(./src/C_Cpp_Mixup SRC_LIST)
