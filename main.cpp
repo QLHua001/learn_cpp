@@ -180,12 +180,12 @@ int main(int, char**) {
 
     // data_structures
     // list_array
-    data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
+    // data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
 
     // Algorithms
     // Search
-    std::vector<int> v1{2, 3, 5, 11, 34, 51, 102, 222};
-    int idx = algorithms::Search::Test_BinSearch(v1, 11);// 命名空间:类空间:成员函数
+    // std::vector<int> v1{2, 3, 5, 11, 34, 51, 102, 222};
+    // int idx = algorithms::Search::Test_BinSearch(v1, 11);// 命名空间:类空间:成员函数
 
     // Sort
     std::vector<int> v2{233, 32, 535, 101, 15, 51, 102, 222};
