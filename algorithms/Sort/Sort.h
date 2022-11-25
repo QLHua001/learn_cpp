@@ -14,6 +14,9 @@ public:
     //! 选择排序 不稳定排序 O(n^2)
     static void Test_SelectSort(std::vector<int>& vec);
 
+    //! 快速排序 不稳定排序 O(nlogn)
+    static void Test_QuickSort(std::vector<int>& vec);
+
 };
 
 }
