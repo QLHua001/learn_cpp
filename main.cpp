@@ -30,6 +30,7 @@
 #include "Lambda/Lambda.h"
 #include "Regex/Regex.h"
 #include "TypeID/TypeID.h"
+#include "lt/lt.h"
 
 static float intersection_area(const Object& obj1, const Object& obj2){
     cv::Rect_<float> inter_area = obj1.rect & obj2.rect;
@@ -129,6 +130,10 @@ static void nms_0907(std::vector<Object>& sorted_boxes, std::vector<int>& picked
     
 }
 
+void leetcode(){
+    lt::item35();
+}
+
 //! http://c.biancheng.net/view/vip_2110.html
 //! extern
 // int square(int n); //! 等价于 extern int square(int n); 变量和函数不同，编译器只能根据 extern 来区分，有 extern 才是声明，没有 extern 就是定义。
@@ -188,7 +193,7 @@ int main(int, char**) {
     // int idx = algorithms::Search::Test_BinSearch(v1, 11);// 命名空间:类空间:成员函数
 
     // Sort
-    algorithms::Sort::Benchmark();
+    // algorithms::Sort::Benchmark();
     // std::vector<int> v2{233, 32, 535, 101, 15, 51, 102, 222};
     // // algorithms::Sort::Test_BubbleSort(v2); // 命名空间:类空间:成员函数
     // // algorithms::Sort::Test_InsertSort(v2);
@@ -276,5 +281,7 @@ int main(int, char**) {
     //! typeid
     // TypeID::test_typeid();
     // TypeID::test_typeid_class();
+
+    leetcode();
 
 }

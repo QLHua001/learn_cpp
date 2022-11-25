@@ -93,6 +93,9 @@ aux_source_directory(./src/Regex SRC_LIST)
 # TypeID
 aux_source_directory(./src/TypeID SRC_LIST)
 
+# leetcode
+aux_source_directory(./lt/ SRC_LIST)
+
 set(libraries ${OpenCV_LIBS})
 set(src ${main} ${SRC_LIST})
 
