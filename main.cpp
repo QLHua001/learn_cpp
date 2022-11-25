@@ -186,7 +186,7 @@ int main(int, char**) {
 
     // data_structures
     // list_array
-    // data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
+    data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
 
     // Algorithms
     // Search
@@ -283,6 +283,6 @@ int main(int, char**) {
     // TypeID::test_typeid();
     // TypeID::test_typeid_class();
 
-    leetcode();
+    // leetcode();
 
 }

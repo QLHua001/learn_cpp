@@ -24,20 +24,27 @@ static std::vector<int> item34(const std::vector<int>& vec, int target){
     std::vector<int> res{it, it};
 
     if(it != -1){
-        for (size_t i = it-1; i >= 0; i--)
+        int p;
+        for (p = it-1; p >= 0; p--)
         {
-            if(vec[i] != target){
-                res[0] = i+1;
+            if(vec[p] != target){
+                res[0] = p+1;
                 break;
             }
         }
+        if(p == -1){
+            res[0] = 0;
+        }
         
-        for (size_t i = it+1; i < vec.size(); i++)
+        for (p = it+1; p < vec.size(); p++)
         {
-            if(vec[i] != target){
-                res[1] = i-1;
+            if(vec[p] != target){
+                res[1] = p-1;
                 break;
             }
+        }
+        if(p == vec.size()){
+            res[1] = vec.size() - 1;
         }
     }
 
@@ -45,9 +52,9 @@ static std::vector<int> item34(const std::vector<int>& vec, int target){
 }
 
 void item34(){
-    // std::vector<int> v1{3, 3, 3, 4, 6, 7, 33, 100, 100, 100, 101, 102};
-    std::vector<int> v1;
-    auto res = item34(v1, 3);
+    std::vector<int> v1{3, 3, 3, 4, 6, 7, 33, 100, 100, 100, 101, 102, 102, 102};
+    // std::vector<int> v1;
+    auto res = item34(v1, 102);
     for(auto& item : res) std::cout << item << "\t";
     std::cout << std::endl;
 }

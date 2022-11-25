@@ -15,11 +15,24 @@ void test_list_array(){
     l1.Insert(24);
     l1.Show();
 
-    l1.Sort();
+    // l1.Sort();
+    // l1.Show();
+
+    l1.Insert(24);
+    l1.Insert(17);
+    l1.Insert(9);
+    l1.Insert(35);
     l1.Show();
 
     l1.Remove(10);
     l1.Remove(24);
+    l1.Show();
+
+    l1.Remove(35);
+    l1.Show();
+    l1.Remove(3);
+    l1.Remove(9);
+    l1.Remove(17);
     l1.Show();
 }
 

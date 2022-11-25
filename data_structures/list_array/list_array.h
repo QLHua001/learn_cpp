@@ -83,29 +83,81 @@ namespace list_array{
             if(!this->is_sorted_){
                 this->data_[this->top_] = val;
             }else{
-                //todo 排序数组的插入
+                // 二分查找法
+                int pos = -1; //元素插入位置
+                int left = 0;
+                int right = this->top_ - 1;
+                while(left <= right){
+                    int mid = (left + right) / 2;
+                    if(this->data_[mid] < val) left = mid + 1;
+                    else if(this->data_[mid] > val) right = mid - 1;
+                    else{
+                        pos = mid;
+                        break;
+                    }
+                }
+
+                if(pos == -1) pos = right + 1;
+
+                for (size_t i = this->top_-1; i >= pos; i--)
+                {
+                    this->data_[i+1] = this->data_[i];
+                }
+                this->data_[pos] = val;
             }
             this->top_++;
         }
 
         void Remove(const uint64_t &val){
+            if(!this->is_sorted_){
+                this->Sort();
+            }
+
             uint64_t pos = this->Search(val);
 
             if(pos == -1){
                 std::cout << "Element " << val << " does not present int the array.\n";
                 return;
             }
+
+            int p;
+            //! 确定左边界
+            int left = pos;
+            for (p = pos - 1; p >= 0; p--)
+            {
+                if(this->data_[p] != val){
+                    left = p + 1;
+                    break;
+                }
+            }
+            if(p == -1) left = 0;
+
+            //! 确定右边界
+            int right = pos;
+            for (p = pos + 1; p < this->top_; p++)
+            {
+                if(this->data_[p] != val){
+                    right = p - 1;
+                    break;
+                }
+            }
+            if(p == this->top_) right = this->top_ - 1;
+            
+            int remove_count = right - left + 1;
+            
             std::cout << this->data_[pos] << " deleted.\n";
 
-            for (size_t i = pos; i < this->top_-1; i++)
+            for (int rit = right + 1; rit < this->top_; rit++)
             {
-                this->data_[i] = this->data_[i+1];
+                this->data_[left++] = this->data_[rit];
             }
-            this->top_--;
+            
+            this->top_ -= remove_count;
+
         }
 
         void Show(){
-            for (size_t i = 0; i < this->top_; i++)
+            for (int i = 0; i < this->top_; i++)
             {
                 std::cout << this->data_[i] << "\t";
             }
