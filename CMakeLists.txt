@@ -33,6 +33,8 @@ aux_source_directory(./src/sort/ SRC_LIST)
 # data_structures
 # list_array
 aux_source_directory(./data_structures/list_array SRC_LIST)
+# linked_list
+aux_source_directory(./data_structures/linked_list SRC_LIST)
 
 # algorithms
 # Search

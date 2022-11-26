@@ -4,6 +4,7 @@
 #include "learn_cpp.h"
 #include "sort.h"
 #include "data_structures/list_array/list_array.h"
+#include "data_structures/linked_list/linked_list.h"
 #include "algorithms/Search/Search.h"
 #include "algorithms/Sort/Sort.h"
 #include "C_Cpp_Mixup/func1.h"
@@ -186,7 +187,8 @@ int main(int, char**) {
 
     // data_structures
     // list_array
-    data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
+    // data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
+    data_structures::linked_list::test_linked_list(); // 命名空间:命名空间:普通全局函数
 
     // Algorithms
     // Search
