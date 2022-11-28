@@ -35,6 +35,8 @@ aux_source_directory(./src/sort/ SRC_LIST)
 aux_source_directory(./data_structures/list_array SRC_LIST)
 # linked_list
 aux_source_directory(./data_structures/linked_list SRC_LIST)
+# dlinked_list
+aux_source_directory(./data_structures/dlinked_list SRC_LIST)
 
 # algorithms
 # Search
