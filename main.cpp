@@ -190,7 +190,7 @@ int main(int, char**) {
     // list_array
     // data_structures::list_array::test_list_array();// 命名空间:命名空间:普通全局函数
     // data_structures::linked_list::test_linked_list(); // 命名空间:命名空间:普通全局函数
-    data_structures::dlinked_list::test_dlinked_list();
+    // data_structures::dlinked_list::test_dlinked_list();
 
     // Algorithms
     // Search
@@ -198,12 +198,13 @@ int main(int, char**) {
     // int idx = algorithms::Search::Test_BinSearch(v1, 11);// 命名空间:类空间:成员函数
 
     // Sort
-    // algorithms::Sort::Benchmark();
+    algorithms::Sort::Benchmark();
     // std::vector<int> v2{233, 32, 535, 101, 15, 51, 102, 222};
-    // // algorithms::Sort::Test_BubbleSort(v2); // 命名空间:类空间:成员函数
-    // // algorithms::Sort::Test_InsertSort(v2);
-    // // algorithms::Sort::Test_SelectSort(v2);
-    // algorithms::Sort::Test_QuickSort(v2);
+    // // // algorithms::Sort::Test_BubbleSort(v2); // 命名空间:类空间:成员函数
+    // // // algorithms::Sort::Test_InsertSort(v2);
+    // // // algorithms::Sort::Test_SelectSort(v2);
+    // // algorithms::Sort::Test_QuickSort(v2);
+    // algorithms::Sort::Test_MergeSort(v2, 0, v2.size()-1);
     // for(auto& val : v2) std::cout << val << "\t";
 
     //! C_Cpp_Mixup

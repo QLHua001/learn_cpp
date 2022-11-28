@@ -41,6 +41,12 @@ void Sort::Benchmark(){
     etime = std::chrono::steady_clock::now();
     std::cout << "Test_SelectSort time: " << std::chrono::duration_cast<std::chrono::milliseconds>(etime-stime).count() << " ms" << std::endl;
 
+    t1 = v1;
+    stime = std::chrono::steady_clock::now();
+    Test_MergeSort(t1, 0, t1.size()-1);
+    etime = std::chrono::steady_clock::now();
+    std::cout << "Test_MergeSort time: " << std::chrono::duration_cast<std::chrono::milliseconds>(etime-stime).count() << " ms" << std::endl;
+
 }
 
 }

@@ -22,6 +22,9 @@ public:
     //! 快速排序 不稳定排序 O(nlogn)
     static void Test_QuickSort(std::vector<int>& vec);
 
+    //! 归并排序 稳定排序 O(nlogn)
+    static void Test_MergeSort(std::vector<int>& vec, int left, int right);
+
 };
 
 }
