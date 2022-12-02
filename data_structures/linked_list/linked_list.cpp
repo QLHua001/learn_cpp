@@ -119,7 +119,24 @@ bool List::Delete(int pos, int& val){
 }
 
 void List::Reverse(){
-    //todo
+    // if(!this->head_->next_ || !this->head_->next_->next_) return;
+    if(this->length_ == 0 || this->length_ == 1) return;
+
+    std::shared_ptr<Link> cur = this->head_->next_;
+    std::shared_ptr<Link> prior = nullptr;
+    std::shared_ptr<Link> next = cur->next_;
+
+    this->last_ = cur;
+    while(next != nullptr){
+        cur->next_ = prior;
+        prior = cur;
+        cur = next;
+        next = next->next_;
+    }
+
+    cur->next_ = prior;
+    this->head_->next_ = cur;
+
 }
 
 void List::Display(){
